@@ -2,7 +2,7 @@
 ===============================================
 Arduino library for interface with TM1638 chip. 
 
-![datasheet](ressources/tm1638.pdf)
+datasheet : (ressources/tm1638.pdf)
 
 sample module :
 ![module](ressources/Module-TM1638.webp)

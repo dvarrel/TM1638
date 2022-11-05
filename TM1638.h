@@ -80,7 +80,16 @@ class TM1638{
       digitalWrite(dio_pin, HIGH);    
     }
 
+    /**
+    * @fn getButton
+    * @param s num of button (S1-S8)
+    * @return state of button
+    */
     bool getButton(button_t s);
+    /**
+    * @fn getButtons
+    * @return state of 8 buttons
+    */
     uint8_t getButtons();
 
     /**
@@ -90,6 +99,12 @@ class TM1638{
     * @param state (true or false)
     */
     void writeLed(uint8_t num, bool state);
+
+    /**
+    * @fn writeLeds
+    * @brief set all 8 leds ON or OFF
+    * @param val 8bits
+    */
     void writeLeds(uint8_t val);
 
     /**
@@ -97,9 +112,16 @@ class TM1638{
     * @brief put value on 7 segment display
     * @param digitId num of digit(0-7)
     * @param val value(0->F)
-    * @return Altitude in meter
     */
     void displayVal(uint8_t digitId, uint8_t val);
+        
+    
+    /**
+    * @fn displayDig
+    * @brief set 7 segment display + dot
+    * @param digitId num of digit(0-7)
+    * @param val value 8 bits
+    */
     void displayDig(uint8_t digitId, uint8_t pgfedcba);
 
     /**
@@ -120,9 +142,25 @@ class TM1638{
     */
     void displayTurnOn();
 
-    void displaySetPulse(pulse_t pulse);
+    /**
+    * @fn displaySetBrightness
+    * @brief set display brightness
+    * @param pulse_t (0-7)
+    */
+    void displaySetBrightness(pulse_t pulse);
+
+    /**
+    * @fn reset
+    * @brief switch off all displays-leds
+    */
     void reset();
+
+    /**
+    * @fn test
+    * @brief blink all displays and leds
+    */
     void test();
+
   private:
     void writeData(uint8_t data);
     void writeDataAt(uint8_t displayAddress, uint8_t data);
