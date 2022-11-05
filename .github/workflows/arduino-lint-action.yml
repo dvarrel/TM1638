@@ -1,9 +1,10 @@
-name: GitHub Actions Demo
-run-name: arduino-lint-action
-on: [push]
+on: [push, pull_request]
 jobs:
-  Explore-GitHub-Actions:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: arduino/arduino-lint-action
-      uses: arduino/arduino-lint-action@v1.0.2
+      - uses: actions/checkout@v3
+      - uses: arduino/arduino-lint-action@v1
+        with:
+          library-manager: update
+          compliance: strict
