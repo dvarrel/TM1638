@@ -1,0 +1,29 @@
+==================================
+CLASS
+==================================
+TM1638	KEYWORD1
+
+==================================
+FUNCTIONS
+==================================
+getButton	KEYWORD2
+getButtons	KEYWORD2
+writeLed	KEYWORD2
+writeLeds	KEYWORD2
+displayVal	KEYWORD2
+displayDig	KEYWORD2
+void displayClear	KEYWORD2
+void displayTurnOff	KEYWORD2
+displayTurnOn	KEYWORD2
+displaySetPulse	KEYWORD2
+reset	KEYWORD2
+test	KEYWORD2
+
+==================================
+CONSTANTS
+==================================
+
+
+==================================
+DATA TYPES
+==================================
