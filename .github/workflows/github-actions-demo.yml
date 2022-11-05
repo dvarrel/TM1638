@@ -1,2 +1,9 @@
-- name: arduino/arduino-lint-action
-  uses: arduino/arduino-lint-action@v1.0.2
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: arduino/arduino-lint-action
+      uses: arduino/arduino-lint-action@v1.0.2
