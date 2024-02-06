@@ -38,7 +38,7 @@ void TM1638::reset(){
 }
 
 void TM1638::displayVal(uint8_t digitId, uint8_t val){
-  if (digitId>7 | val>15 | val<0) return;
+  if ((digitId>7) | (val>15) | (val<0)) return;
   setDisplayMode(DISPLAY_TURN_ON | _pulse);
   setDataInstruction(INSTRUCTION_WRITE_DATA| INSTRUCTION_ADDRESS_FIXED);
   writeDataAt(FIRST_DISPLAY_ADDRESS+14-(digitId*2), _digits[val]);
@@ -60,7 +60,7 @@ void TM1638::displayClear(){
 }
 
 void TM1638::writeLed(uint8_t num,bool state){
-  if (num<1 |num>8) return;
+  if ((num<1) | (num>8)) return;
   setDisplayMode(DISPLAY_TURN_ON | _pulse);
   setDataInstruction(INSTRUCTION_WRITE_DATA | INSTRUCTION_ADDRESS_FIXED);
   writeDataAt(FIRST_DISPLAY_ADDRESS + (num*2-1), state);
@@ -86,7 +86,7 @@ void TM1638::displayTurnOff(){
 }
 
 void TM1638::displaySetBrightness(pulse_t newpulse){
-  if (newpulse<PULSE1_16 | newpulse>PULSE14_16) return;
+  if ((newpulse<PULSE1_16) | (newpulse>PULSE14_16)) return;
   _pulse = newpulse;
   uint8_t data = (_isOn) ? DISPLAY_TURN_ON : DISPLAY_TURN_OFF;
   data |= _pulse;

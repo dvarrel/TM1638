@@ -3,8 +3,8 @@
  * @brief Arduino library for interface with TM1638 chip. 
  * @n read buttons, switch leds, display on 7segment.
  * @author [Damien](web@varrel.fr)
- * @version  V1.0
- * @date  2022-11-01
+ * @version  V1.0.1
+ * @date  2024-02-06
  * @url https://github.com/dvarrel/TM1638.git
  * @module https://fr.aliexpress.com/item/32832772646.html
  */

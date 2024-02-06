@@ -1,9 +1,9 @@
 #include <TM1638.h>
 
 //choose digital pins compatibles with your board
-#define STB A0 // Strobe digital pin
-#define CLK A1 // clock digital pin
-#define DIO A2 // data digital pin
+#define STB 2 // Strobe digital pin
+#define CLK 3 // clock digital pin
+#define DIO 4 // data digital pin
 
 TM1638 tm(CLK,DIO,STB);
 
@@ -13,7 +13,7 @@ void setup() {
   tm.test();
 }
 
-uint8_t pulse=PULSE1_16;
+pulse_t pulse=PULSE1_16;
 
 void loop() {
   const uint8_t text[]={0x7c,0x1c,0x78,0x78,0x5c,0x54};
